@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="background-color:lightcyan">
+          <h5 style="color:black">Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)" style="background-color:#5ad0ee"></select>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading" style="background-color:lightcyan">
+            <h3 class="panel-title" style="color:black">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body" style="background-color:#5ad0ee"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar" class="js-plotly-plot text-center"></div>
+          <div class="well" id="otu">
+            <h4>
+              <a href="https://en.wikipedia.org/wiki/Operational_taxonomic_unit#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,originally%20introduced%20by%20Robert%20R.">*OTU means:</a>
+            </h4> 
+            <p> An operational taxonomic unit. </p>
+          </div>  
+      </div>
+      <div class="col-md-5">
+        <div id="gauge" class="js-plotly-plot text-center"></div>
+          <div class="well text-center" id="gauge">
+            <p> The above gauge displays the weekly washing frequency's value, and display the value as a measure from 0-10 on the progress bar in the gauge chart when an individual ID is selected from the dropdown menu </p>
+          </div> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble" class="js-plotly-plot text-center"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
